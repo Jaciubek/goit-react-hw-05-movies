@@ -1,0 +1,35 @@
+.movie__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  list-style-type: none;
+}
+.movie__item {
+  max-width: 216px;
+  width: 100%;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgb(17, 221, 187);
+  box-shadow: 0 5px 8px 0 rgba(31, 143, 48, 0.08);
+  transition: scale 500ms cubic-bezier(0.075, 0.82, 0.165, 0.8);
+  overflow: hidden;
+}
+
+.movie__item:hover {
+  scale: 1.2;
+}
+
+.movie__list img {
+  width: 216px;
+  height: 324px;
+}
+
+.movie__title {
+  padding: 20px;
+  font-size: 20px;
+}
+.movie__link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
