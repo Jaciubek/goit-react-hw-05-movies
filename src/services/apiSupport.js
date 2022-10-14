@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = '34b039d9928c0cbb29ba3089b029dd2e';
+const API_KEY = '13376ece24dd3764203e2484d15e71b5';
 const BASE_URL = 'https://api.themoviedb.org/3/';
 
 // fetching function for the most popular movies of the day
