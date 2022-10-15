@@ -1,9 +1,10 @@
 import axios from 'axios';
 
+
+
 const API_KEY = '24d71428afc96f148d79022ebc2767a3';
 const BASE_URL = 'https://api.themoviedb.org/3/';
 
-// fetching function for the most popular movies of the day
 
 const fetchTrendyMovies = async setMovies => {
   try {
@@ -17,8 +18,6 @@ const fetchTrendyMovies = async setMovies => {
   }
 };
 
-// fetching function the movie by id
-
 const fetchMovieById = async (movieId, setMovie) => {
   try {
     const response = await axios.get(
@@ -31,7 +30,6 @@ const fetchMovieById = async (movieId, setMovie) => {
   }
 };
 
-// fetching characters in the movie by the id of the movie
 
 const fetchMovieCast = async (movieId, setCast) => {
   try {
@@ -45,7 +43,18 @@ const fetchMovieCast = async (movieId, setCast) => {
   }
 };
 
-// fetching reviews about the movie by the id of the movie
+const fetchMovieByQuery = async (query, setSearchedMovies) => {
+  try {
+    const response = await axios.get(
+      `${BASE_URL}search/movie?api_key=${API_KEY}&query=${query}&page=1&include_adult=false`
+    );
+    const data = response.data.results;
+    return setSearchedMovies(data);
+  } catch (error) {
+    console.log(`${error.name}: ${error.message}`);
+  }
+};
+
 
 const fetchMovieReviews = async (movieId, setReviews) => {
   try {
@@ -59,19 +68,8 @@ const fetchMovieReviews = async (movieId, setReviews) => {
   }
 };
 
-// fetching the movies by query
 
-const fetchMovieByQuery = async (query, setSearchedMovies) => {
-  try {
-    const response = await axios.get(
-      `${BASE_URL}search/movie?api_key=${API_KEY}&query=${query}&page=1&include_adult=false`
-    );
-    const data = response.data.results;
-    return setSearchedMovies(data);
-  } catch (error) {
-    console.log(`${error.name}: ${error.message}`);
-  }
-};
+
 
 export {
   fetchMovieById,
