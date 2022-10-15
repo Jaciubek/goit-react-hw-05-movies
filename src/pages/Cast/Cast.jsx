@@ -2,7 +2,7 @@ import styles from './Cast.module.css';
 import placeholderImg from '../../components/img/placeholder.png';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieCast } from 'services/apiSupport';
+import { fetchMovieCast } from 'services/fetch';
 import { nanoid } from 'nanoid';
 
 

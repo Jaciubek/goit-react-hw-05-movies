@@ -1,7 +1,7 @@
 import styles from './HomePage.module.css';
 import React, { useState, useEffect } from 'react';
 import MovieList from 'components/MovieList';
-import { fetchTrendyMovies } from 'services/apiSupport';
+import { fetchTrendyMovies } from 'services/fetch';
 
 const HomePage = () => {
   const { container, heading } = styles;

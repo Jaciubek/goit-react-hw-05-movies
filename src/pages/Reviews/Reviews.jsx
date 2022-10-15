@@ -1,7 +1,7 @@
 import styles from './Reviews.module.css';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieReviews } from 'services/apiSupport';
+import { fetchMovieReviews } from 'services/fetch';
 import { nanoid } from 'nanoid';
 
 const Reviews = () => {

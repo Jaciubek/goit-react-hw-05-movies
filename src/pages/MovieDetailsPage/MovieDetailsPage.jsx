@@ -3,7 +3,7 @@ import placeholderImg from '../../components/img/placeholder.png';
 import React, { useState, useEffect, Suspense } from 'react';
 import styled from 'styled-components';
 import { useLocation, useNavigate, useParams, Outlet, NavLink } from 'react-router-dom';
-import { fetchMovieById } from 'services/apiSupport';
+import { fetchMovieById } from 'services/fetch';
 import Loader from 'components/Loader/Loader';
 
 const StyledLink = styled(NavLink)`
